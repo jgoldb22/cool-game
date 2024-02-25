@@ -1,6 +1,7 @@
 # import the pygame module 
 import pygame 
-  
+
+# cool note
 # Define the background colour 
 # using RGB color coding. 
 background_colour = (234, 212, 252) 

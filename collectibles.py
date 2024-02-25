@@ -5,8 +5,9 @@ class Collectible(pygame.sprite.Sprite):
   
         self.image = pygame.Surface([width, height]) 
         self.image.fill((100,240, 70)) 
-        self.image.set_colorkey(COLOR) 
-  
+    
+        self.rect
         pygame.draw.rect(self.image,color,pygame.Rect(0, 0, width, height)) 
   
         self.rect = self.image.get_rect() 
+        # hello

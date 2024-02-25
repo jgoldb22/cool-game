@@ -1,5 +1,6 @@
 import pygame 
 import random
+from collectibles import *
 
 pygame.init()
 clock = pygame.time.Clock()
@@ -11,8 +12,8 @@ dt = 0
 color = (155,30,220)
 color1 = (255,0,0)
 count = 0
-pygame.display.flip() 
 player_pos = pygame.Vector2(screen.get_width() / 2, screen.get_height() / 2)
+pygame.display.flip() 
 running = True
 
 circle_pos = pygame.Vector2(screen.get_width() / 2, 0)
@@ -35,9 +36,11 @@ while running:
         circle_pos.x = random.randint(0, screen.get_width())
     circle_pos.y = (circle_pos.y + 3) % screen.get_height()
     pygame.draw.circle(screen, color1, circle_pos, 3)
-    pygame.draw.rect(screen, color, pygame.Rect(player_pos.x, player_pos.y, 20, 4))
+    player = pygame.Rect(player_pos.x, player_pos.y, 20, 4)
+    pygame.draw.rect(screen, color, player)
     pygame.display.flip()
     count = pygame.time.get_ticks() / 100
     dt = clock.tick(60) / 10000
-    print(count)
-    # hello
+    print(hello())
+    # hello1
+    
